@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - dev
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # This removes the warning
 
 jobs:
   create-pr:
