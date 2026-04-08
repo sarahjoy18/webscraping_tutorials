@@ -1,0 +1,20 @@
+name: auto-pull-request.yml
+on:
+  push:
+    branches:
+      - dev
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create Pull Request
+        uses: diillson/auto-pull-request@v1.0.1
+        with:
+          destination_branch: 'main'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
