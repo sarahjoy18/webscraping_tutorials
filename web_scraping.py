@@ -15,7 +15,7 @@ for tutorial in doc.find_all('h2',class_='css-1yr1rb9'):
     desc_tag = tutorial.parent.parent.find('div',class_='css-aa366q')
     print(desc_tag.text)
 
-#Below is for webscapring static html only
+#Below is for webscraping static html only
 # with open("index.html") as file:
 #     doc = BeautifulSoup(file, 'html.parser')
 #     print("reading the file...")
